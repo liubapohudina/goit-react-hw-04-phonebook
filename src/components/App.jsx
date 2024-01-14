@@ -42,11 +42,10 @@ export const App = () => {
   
  const onChangeInput = (event) => {
     const { name, value } = event.currentTarget;
-   setValues({
-     ...filter,
-     ...values,
+   setValues((prevValues) => ({
+     ...prevValues,
      [name]: value
-   });
+   }));
   }
 
   const onClickSubmit = (event) => {
