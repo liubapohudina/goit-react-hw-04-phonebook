@@ -11,12 +11,13 @@ import Filter from "./Form/FilterSearch";
 
 export const App = () => {
  
-  const [values, setValues] = useState({
-    contacts: JSON.parse(localStorage.getItem('contacts')) || [],
-    // name: '',
-    // number: '',
-    filter: '',
-  })
+const [values, setValues] = useState(() => ({
+  contacts: JSON.parse(localStorage.getItem('contacts')) || [],
+  // name: '',
+  // number: '',
+  filter: '',
+}));
+
   const { contacts, filter } = values;
 
 
